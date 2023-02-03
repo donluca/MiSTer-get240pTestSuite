@@ -1,8 +1,8 @@
 # 240p Test Suite downloader and updater for MiSTer FPGA
 
-# What is this?
+## What is this?
 
-This is a script which will let you download and keep updated all of the 240p Test Suites for several game consoles in one go.  
+This is a script which will let you download and keep updated all of the 240p Test Suites for several game consoles in one go on your MiSTer FPGA.  
 The [240p Test Suite](https://junkerhq.net/xrgb/index.php?title=240p_test_suite) is a collection of tools originally developed by [Artemio Uribna](https://junkerhq.net/) and later ported to several platforms by other developers to diagnose and calibrate monitors to make sure your gaming consoles will look their best on your setup.  
 Some platforms have also [MDFourier](https://junkerhq.net/MDFourier/) included which is an audio analysis tool to diagnose and make sure that the audio coming out from your console is correct and not altered or degraded.  
 It can be used from the GUI (in this case it will automatically download and/or update the various 240p Test Suites) or from command line with the following syntax:  
@@ -30,6 +30,6 @@ Example: ./get240pTS.sh MD z
 This will download the Mega Drive 240p Test Suite and unzip it  
 ```
 
-# Installation
+## Installation
 
 You can install this script by downloading it from here and copying it to /media/fat/Scripts (the Script folder on your SD card).  
