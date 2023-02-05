@@ -46,6 +46,7 @@ function showUsage () {
     # echo "GC (Nintendo GameCube)"
     echo "GBA (Nintendo GameBoy Advance)"
     echo "MCD (SEGA Mega Drive/Genesis + Mega CD/SEGA CD)"
+    echo "32X (SEGA Mega Drive/Genesis + SEGA 32X)"
     echo "MD (SEGA Mega Drive/Genesis)"
     echo "NES (Nintendo Entertainment System/Famicom)"
     echo "PCE (NEC PC Engine/TurboGrafx-16)"
@@ -71,6 +72,7 @@ function getAll()
     ./get240pTS.sh GBA
     # ./get240pTS.sh GC z
     ./get240pTS.sh MCD z
+    ./get240pTS.sh 32X
     ./get240pTS.sh MD z
     ./get240pTS.sh NES
     ./get240pTS.sh PCE z
@@ -95,13 +97,14 @@ LINKS+=("http://junkerhq.net/240pTestSuite/PinoBatch/144pTestSuite.gb") #Game Bo
 LINKS+=("http://junkerhq.net/240pTestSuite/PinoBatch/160pTestSuite.gba") #Game Boy Advanced
 LINKS+=("http://junkerhq.net/240pTestSuite/GameCube/240pTestSuite-GameCube-latest.zip") #GameCube
 LINKS+=("http://junkerhq.net/240pTestSuite/SegaCD/240pTestSuite-Sega_Mega_CD-latest.zip") #MegaCD
+LINKS+=("https://github.com/Dasutin/32X240pTestSuite/releases/download/v1.0/240pSuite_32X_1.0.32x") #SEGA 32X
 LINKS+=("http://junkerhq.net/240pTestSuite/MegaDrive/240pTestSuite-MD_Genesis-latest.zip") #Mega Drive
 LINKS+=("http://junkerhq.net/240pTestSuite/PinoBatch/240pTestSuite.nes") #NES
 LINKS+=("http://junkerhq.net/240pTestSuite/PCE/240pTestSuite-PCE_TG16-HuCard-latest.zip") #PCEngine
 LINKS+=("http://junkerhq.net/240pTestSuite/PCE/240pTestSuite-PCE_TG16-CDROM-latest.zip") #PCEngine CD
 LINKS+=("http://junkerhq.net/240pTestSuite/PCE/240pTestSuite-PCE_TG16-SuperCDROM-latest.zip") #PCEngine SuperCD
 LINKS+=("https://github.com/filipalac/240pTestSuite-PS1/releases/download/19122020/240pTestSuitePS1-EMU.zip") #Playstation
-LINKS+=("https://github.com/sverx/SMSTestSuite/releases/download/v0.33/SMSTestSuite.sms") #Master System
+LINKS+=("https://github.com/sverx/SMSTestSuite/releases/download/v0.34/SMSTestSuite.sms") #Master System
 LINKS+=("http://junkerhq.net/240pTestSuite/SNES/240pTestSuite-SNES-latest.zip") #SNES
 LINKS+=("http://junkerhq.net/240pTestSuite/Wii/240pTestSuite-Wii-latest.zip") #Wii
 
@@ -147,40 +150,44 @@ case $1 in
         INDEX=4
         TDIR+="MegaCD/"
         ;;
-    MD)
+    32X)
         INDEX=5
+        TDIR+="s32x/"
+        ;;
+    MD)
+        INDEX=6
         TDIR+="Genesis/"
         ;;
     NES)
-        INDEX=6
+        INDEX=7
         TDIR+="NES/"
         ;;
     PCE)
-        INDEX=7
+        INDEX=8
         TDIR+="TGFX16/"
         ;;
     PCECD)
-        INDEX=8
+        INDEX=9
         TDIR+="TGFX16-CD/CD-"
         ;;
     PCESCD)
-        INDEX=9
+        INDEX=10
         TDIR+="TGFX16-CD/SCD-"
         ;;
     PS1)
-       INDEX=10
+       INDEX=11
        TDIR+="Playstation/"
        ;;
     SMS)
-        INDEX=11
+        INDEX=12
         TDIR+="SMS/"
         ;;
     SNES)
-        INDEX=12
+        INDEX=13
         TDIR+="SNES/"
         ;;
     # WII)
-    #    INDEX=13
+    #    INDEX=14
     #    TDIR=""
     #    ;;
     *)
