@@ -37,7 +37,7 @@ You can install this script by downloading it from here and copying it to /media
 
 ## Credits  
 
-[Artemio Uribna](https://junkerhq.net/): Dreamcast, Game Cube, MegaCD, Mega Drive, PCEngine, PCEngine CD, PCEngine SuperCD, SNES, Wii  
+[Artemio Urbina](https://junkerhq.net/): Dreamcast, Game Cube, MegaCD, Mega Drive, PCEngine, PCEngine CD, PCEngine SuperCD, SNES, Wii  
 [PinoBatch](https://github.com/pinobatch/240p-test-mini): NES, Game Boy, Game Boy Advanced  
 [Daustin](https://github.com/Dasutin/32X240pTestSuite): SEGA 32X  
 [Filip Aláč](https://github.com/filipalac/240pTestSuite-PS1): Playstation  
