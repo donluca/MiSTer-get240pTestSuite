@@ -14,6 +14,7 @@ Platforms supported:
 GB (Nintendo Game Boy)  
 GBA (Nintendo GameBoy Advance)  
 MCD (SEGA Mega Drive/Genesis + Mega CD/SEGA CD)  
+32X (SEGA Mega Drive/Genesis + SEGA 32X)  
 MD (SEGA Mega Drive/Genesis)  
 NES (Nintendo Entertainment System/Famicom)  
 PCE (NEC PC Engine/TurboGrafx-16)  
