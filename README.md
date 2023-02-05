@@ -33,7 +33,7 @@ This will download the Mega Drive 240p Test Suite and unzip it
 
 ## Installation
 
-You can install this script by downloading it from here and copying it to /media/fat/Scripts (the Script folder on your SD card).  
+You can install this script by downloading get240pTS.sh from this repository and copying it to /media/fat/Scripts (the Script folder on your SD card).  
 
 ## Credits  
 
