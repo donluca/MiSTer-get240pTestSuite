@@ -13,11 +13,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Copyright 2022 donluca <donluca@theclassicgamer.net>
+# Copyright 2023 donluca <donluca@theclassicgamer.net>
 
 # You can download the latest version of this script from:
 # https://github.com/donluca/MiSTer-get240pTestSuite
 
+# Version 1.2 - 2023-02-05 - Updated links to the newest 240p Test Suites and added SEGA 32x
 # Version 1.1 - 2022-12-12 - Updated links to the newest 240p Test Suites and enabled Playstation links
 # Version 1.0 - 2021-04-26 - First commit
 
