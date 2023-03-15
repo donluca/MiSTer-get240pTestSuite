@@ -18,6 +18,7 @@
 # You can download the latest version of this script from:
 # https://github.com/donluca/MiSTer-get240pTestSuite
 
+# Version 1.3 - 2023-03-15 - Added NeoGeo MVS/AES and NeoGeo CD
 # Version 1.2 - 2023-02-05 - Updated links to the newest 240p Test Suites and added SEGA 32x
 # Version 1.1 - 2022-12-12 - Updated links to the newest 240p Test Suites and enabled Playstation links
 # Version 1.0 - 2021-04-26 - First commit
@@ -49,6 +50,8 @@ function showUsage () {
     echo "MCD (SEGA Mega Drive/Genesis + Mega CD/SEGA CD)"
     echo "32X (SEGA Mega Drive/Genesis + SEGA 32X)"
     echo "MD (SEGA Mega Drive/Genesis)"
+    echo "NGCD (SNK NeoGeo CD)"
+    echo "NG (SNK NeoGeo MVS/AES)"
     echo "NES (Nintendo Entertainment System/Famicom)"
     echo "PCE (NEC PC Engine/TurboGrafx-16)"
     echo "PCECD (NEC PC Engine/TurboGrafx-16 + TurboGrax-CD/CD-ROM)"
@@ -75,6 +78,8 @@ function getAll()
     ./get240pTS.sh MCD z
     ./get240pTS.sh 32X
     ./get240pTS.sh MD z
+    ./get240pTS.sh NGCD z
+    ./get240pTS.sh NG z
     ./get240pTS.sh NES
     ./get240pTS.sh PCE z
     ./get240pTS.sh PCECD z
@@ -100,6 +105,8 @@ LINKS+=("http://junkerhq.net/240pTestSuite/GameCube/240pTestSuite-GameCube-lates
 LINKS+=("http://junkerhq.net/240pTestSuite/SegaCD/240pTestSuite-Sega_Mega_CD-latest.zip") #MegaCD
 LINKS+=("https://github.com/Dasutin/32X240pTestSuite/releases/download/v1.0/240pSuite_32X_1.0.32x") #SEGA 32X
 LINKS+=("http://junkerhq.net/240pTestSuite/MegaDrive/240pTestSuite-MD_Genesis-latest.zip") #Mega Drive
+LINKS+=("http://junkerhq.net/240pTestSuite/NeoGeo/240pTestSuite-NeoGeo-CD-latest.zip") #NeoGeo CD
+LINKS+=("http://junkerhq.net/240pTestSuite/NeoGeo/240pTestSuite-NeoGeo-MVS_AES-latest.zip") #NeoGeo MVS/AES
 LINKS+=("http://junkerhq.net/240pTestSuite/PinoBatch/240pTestSuite.nes") #NES
 LINKS+=("http://junkerhq.net/240pTestSuite/PCE/240pTestSuite-PCE_TG16-HuCard-latest.zip") #PCEngine
 LINKS+=("http://junkerhq.net/240pTestSuite/PCE/240pTestSuite-PCE_TG16-CDROM-latest.zip") #PCEngine CD
@@ -159,36 +166,44 @@ case $1 in
         INDEX=6
         TDIR+="Genesis/"
         ;;
-    NES)
+    NGCD)
         INDEX=7
+        TDIR+="NEOGEOCD/"
+        ;;
+    NG)
+        INDEX=8
+        TDIR+="NEOGEO/"
+        ;;
+NES)
+        INDEX=9
         TDIR+="NES/"
         ;;
     PCE)
-        INDEX=8
+        INDEX=10
         TDIR+="TGFX16/"
         ;;
     PCECD)
-        INDEX=9
+        INDEX=11
         TDIR+="TGFX16-CD/CD-"
         ;;
     PCESCD)
-        INDEX=10
+        INDEX=12
         TDIR+="TGFX16-CD/SCD-"
         ;;
     PS1)
-       INDEX=11
+       INDEX=13
        TDIR+="Playstation/"
        ;;
     SMS)
-        INDEX=12
+        INDEX=14
         TDIR+="SMS/"
         ;;
     SNES)
-        INDEX=13
+        INDEX=15
         TDIR+="SNES/"
         ;;
     # WII)
-    #    INDEX=14
+    #    INDEX=16
     #    TDIR=""
     #    ;;
     *)
